@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 public class Pi
 {
-    public static void main(String[] args)
+    	public static void main(String[] args)
 	{
 		if(args.length < 2)
 		{
@@ -26,9 +26,9 @@ public class Pi
 				System.exit(1);
 			}
 		}
-    }
+	}
     
-    public void calc(long numThreads, long numIterations)
+   	public void calc(long numThreads, long numIterations)
 	{
 		Thread threads[] = new Thread[(int) numThreads];
 		AtomicLong count = new AtomicLong(0);
@@ -75,5 +75,5 @@ public class Pi
 		System.out.println("Inside = " + count.get());
 		System.out.println("Ratio = " + ratio);
 		System.out.println("Pi = " + pi);
-    }
+    	}
 }
